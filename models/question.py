@@ -36,6 +36,7 @@ class Question(Document):
     swarm_result : Optional[str]
     survey_result : Optional[list]
     final_responders : Optional[list]
+    state : str
 
     class Config:
         schema_extra = {
@@ -44,11 +45,11 @@ class Question(Document):
                 "context" : "text",
                 "target_responder" : [],
                 "option" : [],
-                "max_part" : "maximum participation",
-                "curr_part" : "current participation",
-                "bounty" : "Bounty",
-                "time_asked" : "time",
-                "time_answered" : "time",
+                "max_part" : "10",
+                "curr_part" : "1",
+                "bounty" : "9.99",
+                "time_asked" : "time_asked",
+                "time_answered" : "time_answered",
                 #"option 1" : "option 1",
                 #"option 2" : "option 1",
                 #option 3" : "option 1",
@@ -56,16 +57,17 @@ class Question(Document):
                 #"option 5" : "option 1",
                 #"option 6" : "option 1",
                 "like" : [],
-                #"comment" : {
-                    #"commenter" : "hh",
-                   # "comment_text" : "comment",
-               # },
+                "comment" : {
+                    "commenter" : "john Doe",
+                    "comment_text" : "That's a great comment! \m/",
+                },
                 "share" : [],
                 "category" : [],
                 "tags" : [],
                 "swarm_result" : "answer",
                 "survey_result" : [],
-                "final_responders" : [] 
+                "final_responders" : [],
+                "state" : "unanswered" 
             }
         }
 
