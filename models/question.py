@@ -22,7 +22,7 @@ class Question(Document):
     #option2 : str
     #option3 : str
     #option4 : str
-    #option5 : str
+    #option5 : str#2222s
     #option6 : str
     time_asked : str
     time_answered : Optional[str]
@@ -64,7 +64,7 @@ class Question(Document):
                 "category" : [],
                 "tags" : [],
                 "swarm_result" : "answer",
-                "survey_result" : "%",
+                "survey_result" : [],
                 "final_responders" : [] 
             }
         }
