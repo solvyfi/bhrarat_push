@@ -30,4 +30,5 @@ app.include_router(UserRouter, tags=["User"], prefix="/user")
 app.include_router(StudentRouter, tags=["Students"], prefix="/student", dependencies=[Depends(token_listener)])
 app.include_router(QuestionRouter, tags=["Question"], prefix="/questions",dependencies=[Depends(token_listener)])
 app.include_router(GroupRouter, tags=["Group"], prefix="/group",dependencies=[Depends(token_listener)])
+app.include_router(GroupRouter, tags=["Category"], prefix="/category",dependencies=[Depends(token_listener)])
 #1234

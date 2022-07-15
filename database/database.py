@@ -1,6 +1,7 @@
 from typing import List, Union,Dict
 
 from beanie import PydanticObjectId
+from models.category import Category
 
 from models.user import User
 from models.question import Question
@@ -11,6 +12,7 @@ user_collection = User
 student_collection = Student
 question_collection = Question
 group_collection = Group
+category_collection = Category
 
 
 async def add_user(new_user: User) -> User:
@@ -21,6 +23,10 @@ async def add_user(new_user: User) -> User:
 async def add_group(new_group: Group) -> Group:
     group = await new_group.create()
     return group
+
+async def add_category(new_category: Category) -> Category:
+    category = await new_category.create()
+    return category
 
 async def add_question(new_question: Question) -> Question:
     question = await new_question.create()
