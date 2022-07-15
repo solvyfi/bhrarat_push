@@ -1,6 +1,7 @@
 from typing import Optional
 
 from beanie import init_beanie
+from models.category import Category
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseSettings
 
@@ -8,6 +9,7 @@ from models.user import User
 from models.student import Student
 from models.question import Question
 from models.group import Group
+from models.category import Category
 
 
 class Settings(BaseSettings):
@@ -28,4 +30,4 @@ class Settings(BaseSettings):
 async def initiate_database():
     client = AsyncIOMotorClient(Settings().DATABASE_URL)
     await init_beanie(database=client.get_default_database(),
-                      document_models=[User, Student, Question, Group])
+                      document_models=[User, Student, Question, Group, Category])

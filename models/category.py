@@ -15,7 +15,7 @@ class Category(Document):
     followers : list 
     ques : Optional[list]
     profile_pic : Optional[str]
-    metadata : Optional[dict] 
+    metadata : Optional[dict]
 
     class Config:
         schema_extra = {
@@ -25,7 +25,7 @@ class Category(Document):
                 "followers" : [],
                 "ques" : [],
                 "profile_pic" : "url",
-                "metadata" : "Meta",
+                "metadata" : {},
             }
         }
 

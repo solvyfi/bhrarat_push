@@ -7,6 +7,7 @@ from models.user import User
 from models.question import Question
 from models.student import Student
 from models.group import Group
+from models.category import Category
 
 user_collection = User
 student_collection = Student
