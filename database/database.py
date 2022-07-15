@@ -5,16 +5,22 @@ from beanie import PydanticObjectId
 from models.user import User
 from models.question import Question
 from models.student import Student
+from models.group import Group
 
 user_collection = User
 student_collection = Student
 question_collection = Question
+group_collection = Group
 
 
 async def add_user(new_user: User) -> User:
     user = await new_user.create()
     return user
 
+
+async def add_group(new_group: Group) -> Group:
+    group = await new_group.create()
+    return group
 
 async def add_question(new_question: Question) -> Question:
     question = await new_question.create()

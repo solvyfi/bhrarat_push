@@ -14,7 +14,7 @@ class Question(Document):
     context : Optional[str]
     target_responder : list
     req_part : int
-    curr_part : Optional[int]
+    curr_part : Optional[int] #This is a counter for live participants ( Active responders in the room )
     bounty : float = 0.0 
     time_asked : str
     time_answered : Optional[str]
@@ -36,7 +36,7 @@ class Question(Document):
             "example" : {
                 "question" : "Type your question",
                 "context" : "text",
-                "target_responder" : [], # Public , GroupID or IndividualIDs
+                "target_responder" : [], # Public , Groups or Individuals
                 "option" : [],
                 "req_part" : "10",
                 "curr_part" : "1",
