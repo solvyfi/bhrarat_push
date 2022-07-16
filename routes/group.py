@@ -17,3 +17,4 @@ async def add_group_data(group: Group = Body(...)):
         "description": "Student created successfully",
         "data": new_group
     }
+#group
